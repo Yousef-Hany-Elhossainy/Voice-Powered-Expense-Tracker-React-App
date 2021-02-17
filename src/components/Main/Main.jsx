@@ -5,8 +5,10 @@ import useStyles from "./styles";
 import Form from "./Form/Form";
 import List from "./List/List";
 
+
 const Main = () => {
     const classes = useStyles();
+   
     return (
         <Card className={classes.root}>
             <CardHeader title="Expense Tracker" subheader="Powered by Speechly"/>
