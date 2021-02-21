@@ -7,17 +7,14 @@ import Form from "./Form/Form";
 import List from "./List/List";
 import InfoCard from '../InfoCard';
 
-
-const Main = () => {
+const Main = () => {  
     const classes = useStyles();
-    const {balance} = useContext(ExpenseTrackerContext);
+    const { balance } = useContext(ExpenseTrackerContext);
     return (
         <Card className={classes.root}>
-            <CardHeader title="Expense Tracker" subheader="Powered by Speechly"/>
+            <CardHeader title="Expense Tracker" subheader="Powered by Speechly" />
             <CardContent>
-                <Typography align="center" variant="h5">
-                    Total Balance ${balance}
-                </Typography>
+                <Typography align="center" variant="h5">Total Balance ${balance}</Typography>
                 <Typography variant="subtitle1" style={{lineheight:'1.5em',marginTop:'20px'}}>
                     <InfoCard/>
                 </Typography>

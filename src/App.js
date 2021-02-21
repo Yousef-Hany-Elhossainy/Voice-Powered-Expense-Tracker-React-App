@@ -3,7 +3,6 @@ import { Grid } from "@material-ui/core";
 import {
   PushToTalkButton,
   PushToTalkButtonContainer,
-  ErrorPanel,
 } from "@speechly/react-ui";
 import { SpeechState, useSpeechContext } from "@speechly/react-client";
 
@@ -21,6 +20,7 @@ const App = () => {
   useEffect(() => {
     if (speechState === SpeechState.Recording) {
       excuteScroll();
+      console.log("Recording");
     }
   }, [speechState]);
 
@@ -49,10 +49,22 @@ const App = () => {
       </Grid>
       <PushToTalkButtonContainer>
         <PushToTalkButton />
-        <ErrorPanel />
       </PushToTalkButtonContainer>
     </div>
   );
 };
 
 export default App;
+
+// export default function App() {
+//   return (
+//     <div className="App">
+//       <SpeechProvider
+//         appId="951fd073-57b6-4e0f-96e5-f8a442e9d603"
+//         language="en-US"
+//       >
+//         <SpeechlyApp />
+//       </SpeechProvider>
+//     </div>
+//   );
+// }
